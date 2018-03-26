@@ -84,7 +84,7 @@ require_once(__DIR__.'/src/ShowsRdmSerie.php');
 
                 <!-- Poster de la série -->
                 <div class="col-md-3 d-none d-md-block">
-                    <img src="https://www.betaseries.com/images/fonds/poster/275274.jpg" alt="Poster de Rick and Morty" class="img-thumbnail">
+                    <img src=<?= getSerie()['images']['poster']?> alt="Poster de Rick and Morty" class="img-thumbnail">
                 </div>
 
                 <!-- Fiche série -->
@@ -92,10 +92,10 @@ require_once(__DIR__.'/src/ShowsRdmSerie.php');
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">
-                                Rick and Morty
+                                <?= getSerie()['name']?>
 
                                 <!-- Affichage de la note avec le bon nombre d'étoiles et un tooltip -->
-                                <span class="stars text-info" data-toggle="tooltip" data-placement="top" title="4.80">
+                                <span class="stars text-info" data-toggle="tooltip" data-placement="top" title=<?= getSerie()[statistics][rating]?>>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
@@ -103,9 +103,9 @@ require_once(__DIR__.'/src/ShowsRdmSerie.php');
                                     <i class="fa fa-star-half"></i>
                                 </span>
                             </h4>
-                            <h6 class="card-subtitle mb-2 text-muted">3 saisons, 38 épisodes</h6>
+                            <h6 class="card-subtitle mb-2 text-muted"><?= getSerie()['statistics']['season_count']['episode_count']?></h6>
                             <h5>
-                                16 867 personnes suivent la série
+                                <?= getSerie()['statistics']['popularity']?>
                             </h5>
                             <p>
                                 <!-- Affichage des genres de la série -->
