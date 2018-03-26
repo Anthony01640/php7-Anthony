@@ -1,3 +1,7 @@
+<?php
+require_once(__DIR__.'/src/ShowsRdmSerie.php');
+ ?>
+
 <!doctype html>
 <html lang="fr">
 <head>
@@ -46,11 +50,11 @@
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="serie.php">
+                        <a class="nav-link" href="aleatoire.php">
                             <i class="fas fa-random"></i> Une série aléatoire
                         </a>
                     </li>
-                    
+
 
                 </ul>
 
@@ -68,9 +72,9 @@
     <main role="main">
         <!-- Header -->
         <div class="jumbotron" style="position: relative">
-            <div class="jumbotron-background" style="background-image: url('https://www.betaseries.com/images/fonds/banner/6786_1395440671.jpg');"></div>
+            <div class="jumbotron-background" style="background-image: url(<?= getSerie()['images']['banner']?>);"></div>
             <div class="container">
-                <h1 class="display-3">Rick and Morty</h1>
+                <h1 class="display-3"><?= getSerie()['name']?></h1>
             </div>
         </div>
 
