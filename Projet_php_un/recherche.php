@@ -43,11 +43,7 @@
                         <i class="fas fa-random"></i> Une série aléatoire
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="test.php">
-                        <i class="fas"></i> Zone de test
-                    </a>
-                </li>
+                
 
             </ul>
 
